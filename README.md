@@ -108,6 +108,21 @@ civic-voice-app/
    npm run seed
    npm run seed:agencies
    ```
+## Future Improvements
+This project was developed in a short timeframe during a hackathon, and there's plenty of room for enhancements, including:
 
-## License
-MIT
+1. Multi-language support for wider accessibility
+
+2. Location tagging using maps to pinpoint issue locations
+
+3. Email/SMS notifications for ticket updates
+
+4. Analytics dashboard for insights on recurring issues
+
+5. AI-powered categorization of complaints using NLP
+
+## Author
+EmmanuelNiyonshuti - [Twitter](https://x.com/NIYONSH77028058) / [Github](https://github.com/EmmanuelNiyonshuti)
+
+Feel free to reach out with feedback, suggestions, or ideas for improvement [Email](emmanuelniyonshuti13@gmail.com)
+
