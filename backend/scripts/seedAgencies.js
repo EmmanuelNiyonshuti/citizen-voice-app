@@ -15,13 +15,18 @@ const agencies = [
   {
     name: 'Rwanda Water Board (RWB)',
     slug: 'rwb',
-    categories: ['WATER']
+    categories: ['WATER_SANITATION']
   },
   {
     name: 'Rwanda Revenue Authority (RRA)',
     slug: 'rra',
-    categories: ['TAXES', 'FINANCE']
-  }
+    categories: ['TAXES']
+  },
+  {
+    name: 'Rwanda Social Security Board (RSSB)',
+    slug: 'rssb',
+    categories: ['HEALTHCARE']
+  },
 ];
 
 const seedAgencies = async () => {
@@ -47,7 +52,7 @@ const seedAgencies = async () => {
         if (!existingAdmin) {
           const admin = new User({
             email: adminEmail,
-            password: `${agency.slug}admin123`, // You should change this in production
+            password: `${agency.slug}${process.env.ADMIN_PWD}`,
             role: 'agencyadmin',
             agency: agency._id,
             fullName: `${agency.name} Admin`
@@ -69,4 +74,4 @@ const seedAgencies = async () => {
   }
 };
 
-seedAgencies(); 
+seedAgencies();

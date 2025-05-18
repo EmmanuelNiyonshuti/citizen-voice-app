@@ -230,8 +230,8 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-6 py-12 md:flex md:items-center md:justify-between lg:px-8">
           <div className="mt-8 md:mt-0">
             <p className="text-center text-sm leading-5 text-gray-500">
-              &copy; {new Date().getFullYear()} Citizen Complaints & Engagement Platform
-              <span className="block sm:inline sm:ml-1">Built with love for Rwanda</span>
+              &copy; {new Date().getFullYear()} Civic Voice
+              <span className="block sm:inline sm:ml-1">Building a better Rwanda together</span>
             </p>
           </div>
         </div>

@@ -1,20 +1,26 @@
-# Rwanda Citizen Complaints and Engagement System
+# Rwanda  Citizen Complaints and Engagement MVP
 
-A digital platform enabling Rwandan citizens to submit and track complaints about public services while allowing government institutions to manage and respond to them effectively.
+A minimal, web-based platform enabling Rwandan citizens to report complaints about public services and receive responses from public institutions. Built as a proof-of-concept for improving government accountability and civic feedback loops.
+
+🔗 **Live Demo**: [https://citizen-voice-app.vercel.app](https://citizen-voice-app.vercel.app)
 
 ## Features
 
-### Citizen Portal
-- Submit complaints with ticket tracking
-- Upload supporting images
-- Track complaint status
-- View official responses
+### 👥 For Citizens
+-  Submit complaints or feedback through a simple web form
 
-### Admin Portal
-- Secure admin dashboard
-- Manage and respond to complaints
-- Filter complaints by category/status
-- Update complaint status
+-  Upload supporting images (optional)
+
+-  Receive a unique ticket ID to track complaint progress
+
+### 🛡️ For Administrators
+-  Secure login to access the admin portal
+
+-  View submitted complaints and basic details
+
+-  Update complaint status (e.g., “In Progress”, “Resolved”)
+
+   ⚠️ Note: Filtering, response history, and advanced analytics are out of scope for this MVP.
 
 ## Tech Stack
 
@@ -25,20 +31,46 @@ A digital platform enabling Rwandan citizens to submit and track complaints abou
 - Multer for file uploads
 
 ### Frontend
-- React 19
+- React 18
 - Tailwind CSS
 - Axios for API calls
+
+## Project Structure
+```bash
+civic-voice-app/
+├── backend/       # Node.js + Express API with MongoDB
+├── frontend/      # React web app for both citizens and admins
+
+```
 
 ## Setup Instructions
 
 ### Prerequisites
 - Node.js (v18 or higher)
-- MongoDB (v6 or higher)
+- MongoDB Atlas (cloud) or local MongoDB instance (v6+)
 - npm or yarn
 
 ### Environment Setup
 1. Clone the repository
-2. Copy `.env.example` to `.env` and update the values
+```bash
+   git clone https://github.com/your-username/civic-voice-app.git
+
+   cd civic-voice-app
+   ```
+
+2. configure environment variables
+   -  copy the example files
+   ```bash
+      cp backend/.env.example backend/.env
+      cp frontend/.env.example frontend/.env
+
+   ```
+   -  Update values inside both .env files:
+
+      * In `backend/.env`, set your `MONGODB_URI`, `PORT`, `ADMIN_EMAIL`, `ADMIN_PASSWORD`, etc.
+
+      * In `frontend/.env`, set the `VITE_API_BASE_URL` to match the backend (e.g., `http://localhost:3000`)
+
 3. Install dependencies:
    ```bash
    # Install backend dependencies
@@ -50,60 +82,32 @@ A digital platform enabling Rwandan citizens to submit and track complaints abou
    npm install
    ```
 
-### Running the Application
-1. Start MongoDB service
-2. Start the backend:
+### Running the Application Locally
+1. Start the backend
+
    ```bash
    cd backend
    npm run dev
-   ```
-3. Start the frontend:
+
+2. Start the frontend
+
    ```bash
-   cd frontend
+   cd ../frontend
    npm run dev
    ```
-4. Access the application:
-   - Frontend: http://localhost:5173
-   - Backend API: http://localhost:3000
+3. Open in browser
 
-## API Documentation
+   Citizen interface: http://localhost:5173
 
-### Authentication Endpoints
-- POST /api/auth/login
-- POST /api/auth/logout
+   Backend API: http://localhost:3000
 
-### Complaint Endpoints
-- POST /api/complaints
-- GET /api/complaints
-- GET /api/complaints/:id
-- PUT /api/complaints/:id
-- GET /api/complaints/track/:ticketId
+🧪 Optional: Run the seed script to create a default admin account:
 
-## Security
-- JWT tokens stored in HTTP-only cookies
-- Password hashing using bcrypt
-- Input validation and sanitization
-- Protected admin routes
-
-## Project Structure
-```
-.
-├── backend/
-│   ├── controllers/
-│   ├── models/
-│   ├── routes/
-│   ├── middleware/
-│   └── utils/
-└── frontend/
-    ├── src/
-    │   ├── components/
-    │   ├── pages/
-    │   └── utils/
-    └── public/
-```
-
-## Contributing
-This is an MVP project. For contributions, please open an issue first to discuss proposed changes.
+   ```bash
+   cd backend
+   npm run seed
+   npm run seed:agencies
+   ```
 
 ## License
-MIT 
+MIT
