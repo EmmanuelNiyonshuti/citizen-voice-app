@@ -231,7 +231,7 @@ export default function Home() {
           <div className="mt-8 md:mt-0">
             <p className="text-center text-sm leading-5 text-gray-500">
               &copy; {new Date().getFullYear()} Civic Voice
-              <span className="block sm:inline sm:ml-1">Building a better Rwanda together</span>
+              <span className="block sm:inline sm:ml-1">  Built by Niyonshuti Emmanuel with ❤️ for Rwanda 🇷🇼 — Building a better Rwanda, together.</span>
             </p>
           </div>
         </div>
