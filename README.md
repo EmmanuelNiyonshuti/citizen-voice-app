@@ -124,5 +124,5 @@ This project was developed in a short timeframe during a hackathon, and there's 
 ## Author
 EmmanuelNiyonshuti - [Twitter](https://x.com/NIYONSH77028058) / [Github](https://github.com/EmmanuelNiyonshuti)
 
-Feel free to reach out with feedback, suggestions, or ideas for improvement [Email](emmanuelniyonshuti13@gmail.com)
+Feel free to reach out with feedback, suggestions, or ideas for improvement [Email](mailto:emmanuelniyonshuti13@gmail.com)
 
