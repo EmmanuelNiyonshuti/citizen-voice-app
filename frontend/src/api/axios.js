@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 let baseURL
-if (APP_ENV === 'Development'){
+if (import.meta.env.APP_ENV === 'Development'){
   baseURL = 'http://localhost:3000/api'
 }else{
   baseURL = import.meta.env.VITE_API_URL
