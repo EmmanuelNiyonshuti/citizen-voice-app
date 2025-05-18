@@ -1,7 +1,11 @@
 import axios from 'axios';
 
-const baseURL = import.meta.env.VITE_API_URL || 'http://localhost:3000/api';
-
+let baseURL
+if (APP_ENV === 'Development'){
+  baseURL = 'http://localhost:3000/api'
+}else{
+  baseURL = import.meta.env.VITE_API_URL
+}
 const api = axios.create({
   baseURL,
   withCredentials: true, // This is important for handling cookies/sessions
